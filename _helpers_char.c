@@ -27,7 +27,7 @@ int _putchar(char ch)
 
 /**
  * is_delim - checks if char is delimeter
- * @ch: char to check
+ * @c: char to check
  * @delim: delimeter string
  * Return: 1 if true, 0 if false
  */

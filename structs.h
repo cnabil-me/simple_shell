@@ -34,6 +34,7 @@ typedef struct list_str
  *@cmd_type: || -  && - , -  ;
  *@read_fd: readed file descriptor
  *@history_count: history line count
+ *@command_options - the command options for the program
  */
 typedef struct command_options
 {

@@ -53,7 +53,7 @@ char **list_to_strings(list_t *head)
 
 /**
  * print_list - prints all elements of a list_t linked list
- * @h: pointer to first node
+ * @head: pointer to first node
  * Return: size of list
  */
 size_t print_list(const list_t *head)
