@@ -97,7 +97,7 @@ ssize_t read_buf(options_t *options, char *buf, size_t *size)
 		return (0);
 	}
 	read_b = read(options->read_fd, buf, R_BUF_SIZE);
-	if (read >= 0)
+	if (read_b >= 0)
 	{
 		*size = read_b;
 	}

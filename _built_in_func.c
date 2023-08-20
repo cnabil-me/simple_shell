@@ -86,6 +86,7 @@ int _help(options_t *options)
 	char **arg_arr;
 
 	arg_arr = options->argv;
+	(void)arg_arr;
 	_puts("help call works. Function not implemented yet  \n");
 
 	return (EXIT_SUCCESS);

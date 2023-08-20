@@ -11,8 +11,8 @@
 int main(int ac, char **av)
 {
 	options_t options[] = {{0, NULL, NULL,
-			     0, 0, 0, 0, NULL, NULL, 0,
-			     0, NULL, 0, 0, 0, 0, 0, 0}};
+				0, 0, 0, 0, NULL, NULL, 0,
+				0, NULL, 0, 0, 0, 0, 0, 0}};
 	int fd = 2;
 
 	if (ac == 2)
