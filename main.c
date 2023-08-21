@@ -1,6 +1,5 @@
 #include "main.h"
 #include "structs.h"
-
 /**
  * main - entry point
  * @ac: arg count
