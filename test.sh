@@ -30,7 +30,7 @@ run_command "ls"
 # Test exit built-in
 echo -e "\nTesting exit built-in"
 run_command "exit"
-run_command "exit 2"
+run_command "exit 98"
 
 # Test env built-in
 echo -e "\nTesting env built-in"
