@@ -17,7 +17,7 @@ int exit_shell(options_t *options)
 			print_error(options, "Illegal number: ");
 			_puts_err(options->argv[1]);
 			_putchar_err('\n');
-			return (EXIT_FAILURE);
+			return (1);
 		}
 		options->err_no = _atoi_w_err(options->argv[1]);
 		return (-2);
@@ -72,7 +72,7 @@ int _cd(options_t *options)
 		_setenv(options, "OLDPWD", _getenv(options, "PWD="));
 		_setenv(options, "PWD", getcwd(buffer, R_BUF_SIZE));
 	}
-	return (EXIT_SUCCESS);
+	return (0);
 }
 
 /**
@@ -89,7 +89,7 @@ int _help(options_t *options)
 	(void)arg_arr;
 	_puts("help call works. Function not implemented yet  \n");
 
-	return (EXIT_SUCCESS);
+	return (0);
 }
 /**
  * _hist - displays the history list
@@ -99,5 +99,5 @@ int _help(options_t *options)
 int _hist(options_t *options)
 {
 	print_list(options->history);
-	return (EXIT_SUCCESS);
+	return (0);
 }

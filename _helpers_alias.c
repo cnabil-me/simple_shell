@@ -14,7 +14,7 @@ int unset_alias(options_t *options, char *str)
 	ptr = _strchr(str, '=');
 	if (!ptr)
 	{
-		return (EXIT_FAILURE);
+		return (1);
 	}
 	c = *ptr;
 	*ptr = 0;
@@ -65,9 +65,9 @@ int echo_alias(list_t *node)
 		_putchar('\'');
 		_puts(ptr + 1);
 		_puts("'\n");
-		return (EXIT_SUCCESS);
+		return (0);
 	}
-	return (EXIT_FAILURE);
+	return (1);
 }
 
 /**
@@ -89,7 +89,7 @@ int _alias(options_t *options)
 			echo_alias(node);
 			node = node->next;
 		}
-		return (EXIT_SUCCESS);
+		return (0);
 	}
 	for (i = 1; options->argv[i]; i++)
 	{
@@ -104,7 +104,7 @@ int _alias(options_t *options)
 		}
 	}
 
-	return (EXIT_SUCCESS);
+	return (0);
 }
 /**
  * replace_alias - replaces an aliases in the tokenized string

@@ -30,12 +30,12 @@ int main(int ac, char **av)
 				_putchar_err(BUF_FLUSH);
 				exit(127);
 			}
-			return (EXIT_FAILURE);
+			return (1);
 		}
 		options->read_fd = fd;
 	}
 	init_env_list(options);
 	read_history(options);
 	handle_cmds(options, av);
-	return (EXIT_SUCCESS);
+	return (0);
 }

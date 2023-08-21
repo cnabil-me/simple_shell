@@ -28,7 +28,7 @@ int _unsetenv(options_t *options, char *var)
 	char *p;
 
 	if (!node || !var)
-		return (EXIT_SUCCESS);
+		return (0);
 
 	while (node)
 	{
@@ -83,5 +83,5 @@ int _setenv(options_t *options, char *var, char *value)
 	add_node_end(&(options->env), buf, 0);
 	free(buf);
 	options->is_env_changed = 1;
-	return (EXIT_SUCCESS);
+	return (0);
 }

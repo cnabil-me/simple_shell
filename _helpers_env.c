@@ -7,7 +7,7 @@
 int _env(options_t *options)
 {
 	print_list_str(options->env);
-	return (EXIT_SUCCESS);
+	return (0);
 }
 
 /**
@@ -47,9 +47,9 @@ int hsh_setenv(options_t *options)
 	}
 	if (_setenv(options, options->argv[1], options->argv[2]))
 	{
-		return (EXIT_SUCCESS);
+		return (0);
 	}
-	return (EXIT_FAILURE);
+	return (1);
 }
 
 /**
@@ -64,12 +64,12 @@ int hsh_unsetenv(options_t *options)
 	if (options->argc == 1)
 	{
 		_puts_err("Too few arguements.\n");
-		return (EXIT_FAILURE);
+		return (1);
 	}
 	for (i = 1; i <= options->argc; i++)
 		_unsetenv(options, options->argv[i]);
 
-	return (EXIT_SUCCESS);
+	return (0);
 }
 
 /**
@@ -85,5 +85,5 @@ int init_env_list(options_t *options)
 	for (i = 0; environ[i]; i++)
 		add_node_end(&node, environ[i], 0);
 	options->env = node;
-	return (EXIT_SUCCESS);
+	return (0);
 }

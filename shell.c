@@ -72,7 +72,6 @@ int handle_builtin_cmd(options_t *options)
 		}
 	return (built_in_ret);
 }
-
 /**
  * handle_extern_cmd - finds a command in PATH
  * @options: Struct contains all command options
@@ -94,7 +93,6 @@ void handle_extern_cmd(options_t *options)
 			k++;
 	if (!k)
 		return;
-
 	path = find_cmd_path(options, _getenv(options, "PATH="), options->argv[0]);
 	if (path)
 	{
@@ -112,7 +110,6 @@ void handle_extern_cmd(options_t *options)
 		}
 	}
 }
-
 /**
  * fork_cmd - forks a an exec thread to run cmd
  * @options: Struct contains all command options

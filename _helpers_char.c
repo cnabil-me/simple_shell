@@ -22,7 +22,7 @@ int _putchar(char ch)
 		buf[i++] = ch;
 	}
 
-	return (EXIT_FAILURE);
+	return (1);
 }
 
 /**
@@ -37,10 +37,10 @@ int is_delim(char c, char *delim)
 	{
 		if (*delim++ == c)
 		{
-			return (EXIT_FAILURE);
+			return (1);
 		}
 	}
-	return (EXIT_SUCCESS);
+	return (0);
 }
 
 /**
@@ -77,11 +77,11 @@ int _isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		return (EXIT_FAILURE);
+		return (1);
 	}
 	else
 	{
-		return (EXIT_SUCCESS);
+		return (0);
 	}
 }
 
